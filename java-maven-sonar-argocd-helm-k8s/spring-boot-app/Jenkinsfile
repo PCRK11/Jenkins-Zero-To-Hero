@@ -27,7 +27,7 @@ pipeline {
     stage('Build and Push Docker Image') {
       environment {
         PATH = "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:${env.PATH}"
-        DOCKER_IMAGE = "krithi200/ultimate-cicd:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "pcrk123/ultimate-cicd-pipeline:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
